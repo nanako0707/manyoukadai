@@ -1,0 +1,12 @@
+<%= form_with(model: @task, local: true) do |form| %>
+  <div class="task_name">
+    <%= form.label :Task_name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="task_detail">
+    <%= form.label :Content %>
+    <%= form.text_field :detail %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<%= link_to 'タスク一覧に戻る', tasks_path %>
