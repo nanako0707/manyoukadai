@@ -34,3 +34,10 @@ Taskテーブル
 | name      | string   |              |
 | detail    | text     |              |
 | user_id   | index    | foreign_key  |
+
+Labelテーブル
+
+|  Column   |  Type    |　Description |
+| --------  | -------- | ------------ |
+| task_id   | integer  | foreign_key  |
+| user_id   | integer  | foreign_key  |
