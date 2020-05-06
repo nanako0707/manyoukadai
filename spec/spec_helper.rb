@@ -1,5 +1,7 @@
 RSpec.configure do |config|
   config.before(:each, type: :system) do
+  # config.before(:all) do
+  #   FactoryBot.reload
     driven_by(:selenium_chrome)
   end
   config.expect_with :rspec do |expectations|

@@ -1,11 +1,32 @@
 ja:
+  view:
+    task_list: タスク一覧
+    task_name: タスク名
+    detail: 詳細
+    check_details: 詳細を確認する
+    new_create_task: 新しくタスクを作成する
+    create_task: タスクを作成する
+    edit_task: タスクを編集する
+    delete_task: タスクを削除する
+    task_details: タスク詳細画面
+    confirm: 本当に削除していいですか？
+    back_task_list: タスク一覧に戻る
+    error: 件のエラーがあります
+  notice:
+    create: タスクを作成しました！
+    update: タスクを編集しました！
+    destroy: タスクを削除しました！
+  helpers:
+    submit:
+      create: 登録する
+      update: 更新する
   activerecord:
     models:
       task: タスク
       user: ユーザー
     attributes:
       task:
-        name: タスク名
+        task_name: タスク名
         detail: 詳細
       user:
         name: 名前
