@@ -5,19 +5,18 @@ RSpec.describe 'タスク管理機能', type: :system do
   #   FactoryBot.create(:task)
   #   FactoryBot.create(:second_task)
   # end
-  # before do
-  #   #「タスク一覧画面」や「タスク詳細画面」などそれぞれのテストケースで、before内のコードが実行される
-  #   #各テストで使用するタスクを一件作成する
-  #   #作成したタスクオブジェクトを各テストケースで呼び出せるようにインスタンス変数に代入
-  #   @task = FactoryBot.create(:task, name: 'task', user_id: 1)
-  # end
+  before do
+    #「タスク一覧画面」や「タスク詳細画面」などそれぞれのテストケースで、before内のコードが実行される
+    #各テストで使用するタスクを一件作成する
+    #作成したタスクオブジェクトを各テストケースで呼び出せるようにインスタンス変数に代入
+    @task = FactoryBot.create(:task)
+    @user = FactoryBot.create(:user)
+  end
   describe 'タスク一覧画面' do
     context 'タスクを作成した場合' do
       #テストコードを it '~' do end　ブロックの中に記載する
       it '作成済みのタスクが表示される' do
         #beforeに必要なタスクデータが作成されるので、ここでテストデータ作成処理を書く必要がない
-        FactoryBot.create(:user)
-        FactoryBot.create(:task)
         #タスク一覧ページに遷移
         visit tasks_path
         #visitした（遷移）page(タスク一覧ページ)に「task」という文字列が
@@ -45,19 +44,17 @@ RSpec.describe 'タスク管理機能', type: :system do
   describe 'タスク登録画面' do
     context '必要項目を入力して、createボタンを押した場合' do
       it 'データが保存される' do
-        # user登録画面に遷移する
-        visit new_user_path
-        FactoryBot.create(:user)
+        # new_task_pathにvisitする（タスク登録ページに遷移する）z
         # 1.ここにnew_task_pathにvisitする処理を書く
         visit new_task_path
+        visit new_user_path
         # 「タスク名」というラベル名の入力欄と、「タスク詳細」というラベル名の入力欄に
-        FactoryBot.create(:task)
         # タスクのタイトルと内容をそれぞれfill_in（入力）する
         # 2.ここに「タスク名」というラベル名の入力欄に内容をfill_in（入力）する処理を書く
         # 3.ここに「タスク詳細」というラベル名の入力欄に内容をfill_in（入力）する処理を書く
         # 「登録する」というvalue（表記文字）のあるボタンをclick_onする（クリックする）
         # 4.「登録する」というvalue（表記文字）のあるボタンをclick_onする（クリックする）する処理を書く
-        click_on '登録する'
+        click_on 'submit'
         # clickで登録されたはずの情報が、タスク詳細ページに表示されているかを確認する
         # （タスクが登録されたらタスク詳細画面に遷移されるという前提）
         # 5.タスク詳細ページに、テストコードで作成したはずのデータ（記述）がhave_contentされているか（含まれているか）を確認（期待）するコードを書く
