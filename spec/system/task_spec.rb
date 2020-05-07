@@ -45,11 +45,12 @@ RSpec.describe 'タスク管理機能', type: :system do
   describe 'タスク登録画面' do
     context '必要項目を入力して、createボタンを押した場合' do
       it 'データが保存される' do
-        # new_task_pathにvisitする（タスク登録ページに遷移する）
+        # user登録画面に遷移する
+        visit new_user_path
+        FactoryBot.create(:user)
         # 1.ここにnew_task_pathにvisitする処理を書く
         visit new_task_path
         # 「タスク名」というラベル名の入力欄と、「タスク詳細」というラベル名の入力欄に
-        FactoryBot.create(:user)
         FactoryBot.create(:task)
         # タスクのタイトルと内容をそれぞれfill_in（入力）する
         # 2.ここに「タスク名」というラベル名の入力欄に内容をfill_in（入力）する処理を書く
