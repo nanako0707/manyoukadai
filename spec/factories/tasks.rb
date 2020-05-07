@@ -5,11 +5,13 @@ FactoryBot.define do
   factory :task do
     name {'task'}
     detail {'detail'}
+    user_id {1}
   end
   #作成するテストデータの名前を「second_task」とします
   #存在しないクラス名の名前をつける場合、オプションで「このクラスのテストデータにしてください」と指定します
   factory :second_task, class: Task do
     name { 'new_task'}
     detail {'new_detail'}
+    user_id {1}
   end
 end
