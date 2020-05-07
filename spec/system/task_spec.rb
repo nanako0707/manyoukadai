@@ -53,8 +53,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         # 2.ここに「タスク名」というラベル名の入力欄に内容をfill_in（入力）する処理を書く
         user = FactoryBot.create(:user, name: 'test1', email: 'test1@example.com', password_digest: 'password', id: 1)
         task = FactoryBot.create(:task, name: 'task', user_id: 1)
-        # 3.ここに「タスク詳細」というラベル名の入力欄に内容をfill_in（入力）する処理を書く
-        user = FactoryBot.create(:user, name: 'test1', email: 'test1@example.com', password_digest: 'password', id: 1)
+        # user = FactoryBot.create(:user, name: 'test1', email: 'test1@example.com', password_digest: 'password', id: 1)
         task = FactoryBot.create(:task, detail: 'detail', user_id: 1)
         # 「登録する」というvalue（表記文字）のあるボタンをclick_onする（クリックする）
         # 4.「登録する」というvalue（表記文字）のあるボタンをclick_onする（クリックする）する処理を書く
