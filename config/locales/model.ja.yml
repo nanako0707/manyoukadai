@@ -12,10 +12,17 @@ ja:
     confirm: 本当に削除していいですか？
     back_task_list: タスク一覧に戻る
     error: 件のエラーがあります
+    sign up: サインアップ
+    of page: のページ
+    log in: ログイン
+    log out: ログアウト
+    profile: プロフィール
   notice:
     create: タスクを作成しました！
     update: タスクを編集しました！
     destroy: タスクを削除しました！
+    login failed: ログインに失敗しました！
+    log out: ログアウトしました！
   helpers:
     submit:
       create: 登録する
@@ -31,7 +38,10 @@ ja:
       user:
         name: 名前
         email: メールアドレス
-        password_digest: パスワード
+        password: パスワード
         current_password: 現在のパスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+      session:
+        email: メールアドレス
+        password: パスワード
