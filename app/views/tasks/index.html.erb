@@ -1,0 +1,20 @@
+<h1><%= t('view.task_list')%></h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th><%= t('view.task_name')%></th>
+    <th><%= t('view.detail')%></th>
+  </tr>
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.name %></td>
+    <td><%= task.detail %></td>
+    <td><%= link_to t('view.check_details'), task_path(task.id) %></td>
+    <td><%= link_to t('view.edit_task'), edit_task_path(task.id) %></td>
+    <td><%= link_to t('view.delete_task'), task_path(task.id), method: :delete, data: { confirm: t('view.confirm') } %></td>
+    <td><%= task.user.name %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+<%= link_to t('view.new_create_task'), new_task_path %>

@@ -1,0 +1,47 @@
+ja:
+  view:
+    task_list: タスク一覧
+    task_name: タスク名
+    detail: 詳細
+    check_details: 詳細を確認する
+    new_create_task: 新しくタスクを作成する
+    create_task: タスクを作成する
+    edit_task: タスクを編集する
+    delete_task: タスクを削除する
+    task_details: タスク詳細画面
+    confirm: 本当に削除していいですか？
+    back_task_list: タスク一覧に戻る
+    error: 件のエラーがあります
+    sign up: サインアップ
+    of page: のページ
+    log in: ログイン
+    log out: ログアウト
+    profile: プロフィール
+  notice:
+    create: タスクを作成しました！
+    update: タスクを編集しました！
+    destroy: タスクを削除しました！
+    login failed: ログインに失敗しました！
+    log out: ログアウトしました！
+  helpers:
+    submit:
+      create: 登録する
+      update: 更新する
+  activerecord:
+    models:
+      task: タスク
+      user: ユーザー
+    attributes:
+      task:
+        task_name: タスク名
+        detail: 詳細
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        current_password: 現在のパスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
+      session:
+        email: メールアドレス
+        password: パスワード
