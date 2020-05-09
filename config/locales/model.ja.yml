@@ -33,7 +33,9 @@ ja:
       user: ユーザー
     attributes:
       task:
+        user: ユーザー
         task_name: タスク名
+        name: タスク名
         detail: 詳細
       user:
         name: 名前

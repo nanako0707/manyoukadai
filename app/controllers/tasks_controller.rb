@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     if @task.save
     redirect_to tasks_path, notice: t('notice.create')
     else
-      render :new
+      render :new if @task.invalid?
     end
   end
 

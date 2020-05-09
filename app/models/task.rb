@@ -3,4 +3,5 @@ class Task < ApplicationRecord
   has_many :labels, dependent: :destroy
   has_many :label_users, through: :labels, source: :user
   validates :name, presence: true
+  validates :detail, presence: true
 end
