@@ -52,4 +52,4 @@ $ heroku create 新しいリポジトリを作る。　自動でリモートリ�
 $ git push heroku master herokuにpushします。
 $ heroku run rails db:migrate heroku上にデータベース作成。
 
-アプリケーションにアクセスできれば成功です。Herokuアプリのアドレスは、https://アプリ名.herokuapp.con/ のように設定されます。
+アプリケーションにアクセスできれば成功です。Herokuアプリのアドレスは、https://アプリ名.herokuapp.com/ のように設定されます。
